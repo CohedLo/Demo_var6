@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Demo_var_6.Pages"      
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="800"
       Title="RegistPage">
 
     <Grid>
-        <Border Grid.Row="1" MinWidth="200" Background="White" VerticalAlignment="Center" Padding="25" MaxWidth="350" CornerRadius="20" Grid.ColumnSpan="2" Height="350">
+        <Border Grid.Row="1" MinWidth="200" Background="White" VerticalAlignment="Center" Padding="25" MaxWidth="350" CornerRadius="20" Grid.ColumnSpan="2" Height="520">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="600" Color="LightGray" ShadowDepth="4"/>
             </Border.Effect>
@@ -17,17 +17,22 @@
                 <TextBlock Text="Регистрация" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
 
                 <Grid  Margin="0 0 0 10">
-                    <Button x:Name="SignUpBtn" HorizontalAlignment="Left" Style="{StaticResource mainBtn}" Margin="20 0 0 0" Content="Вход" Width="80" Click ="Button_Reg_Click"/>
-                    <Button  HorizontalAlignment="Left" FontFamily="Comic Sans MS" Content="Регистрация"  Margin="140,0,0,0" Background="White" Height="32" Width="140" VerticalAlignment="Top" Click="Button_Click"/>
+                    <Button x:Name="SignUpBtn" HorizontalAlignment="Left" Style="{StaticResource mainBtn}" Margin="20 0 0 0" Content="Вход" Width="80" Click ="BtnAuth_Click"/>
+                    <Button  HorizontalAlignment="Left" FontFamily="Comic Sans MS" Content="Регистрация"  Margin="140,0,0,0" Background="White" Height="32" Width="140" VerticalAlignment="Top" Click="BtnReg_Click"/>
                 </Grid>
 
+                <TextBox Margin="50 0 0 0" BorderBrush="White" Text="Введите ID" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="ID" Foreground="Black" Style="{StaticResource mainTxt}"/>
+                <TextBox Margin="50 0 0 0" BorderBrush="White" Text="Введите ФИО" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="FIO" Foreground="Black" Style="{StaticResource mainTxt}" />
                 <TextBox Margin="50 0 0 0" BorderBrush="White" Text="Введите Логин" FontFamily="Comic Sans MS"/>
-                <TextBox x:Name="LoginLabel" Foreground="Black" Style="{StaticResource mainTxt}" TextChanged="LoginLabel_TextChanged"/>
+                <TextBox x:Name="Label" Foreground="Black" Style="{StaticResource mainTxt}" />
                 <TextBox Margin="50 0 0 0" BorderBrush="White" Text="Введите Пароль" FontFamily="Comic Sans MS"/>
                 <PasswordBox x:Name="PassLabel" Style="{StaticResource Password}"/>
-                <Button x:Name="AuthGost" FontFamily="Comic Sans MS" Content="Войти как гость" Background="White" BorderBrush="White"/>
+                <TextBox Margin="50 0 0 0" BorderBrush="White" Text="Введите ID_Role" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="IDRole" Foreground="Black" Style="{StaticResource mainTxt}" />
 
-                <Button x:Name="SignInBtn" Content="Войти" Margin="0 20" Style="{StaticResource mainBtn}" Click="Button_Auth_Click"/>
+                <Button x:Name="RegBtn" Content="Зарегистрироваться" Click="Btn_Reg_Click" Margin="0 20" Style="{StaticResource mainBtn}"/>
             </StackPanel>
         </Border>
     </Grid>

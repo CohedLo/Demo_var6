@@ -28,7 +28,7 @@ namespace Demo_var_6.Pages
 
         private void BtnService_Click(object sender, RoutedEventArgs e)
         {
-            
+            FrameObj.frameMain.Navigate(new PageAddProd());
         }
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {

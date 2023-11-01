@@ -18,14 +18,13 @@ using System.Windows.Threading;
 namespace Demo_var_6.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageProduct.xaml
+    /// Логика взаимодействия для GuestPage.xaml
     /// </summary>
-    public partial class PageProduct : Page
+    public partial class GuestPage : Page
     {
-        public PageProduct()
+        public GuestPage()
         {
             InitializeComponent();
-
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += UpdateData;
@@ -37,13 +36,10 @@ namespace Demo_var_6.Pages
             ListProd.ItemsSource = HistoryProduct;
             ListProd.ItemsSource = ConnectObj.conObj.Product.Where(x => x.ProductName.StartsWith(TxtSearch.Text) || x.ProductDescription.StartsWith(TxtSearch.Text)).ToList();
         }
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            FrameObj.frameMain.Navigate(new PageEditNew((sender as Button).DataContext as Product));
+            FrameObj.frameMain.Navigate(new PageAddInBasket());
         }
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+
     }
 }

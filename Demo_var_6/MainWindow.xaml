@@ -16,7 +16,7 @@
             <Button x:Name="btnBack"
                     Width="150" Height="30" FontSize="17"
                     Foreground="White" Background="#498C51"
-                    Margin="500 0 0 0" FontFamily="Comic Sans MS">Назад</Button>
+                    Margin="500 0 0 0" Click="BtnBack_Click" FontFamily="Comic Sans MS">Назад</Button>
             <Button x:Name="btnFaq"
                     Width="150" Height="30" FontSize="17"
                     Foreground="White" Background="#498C51"

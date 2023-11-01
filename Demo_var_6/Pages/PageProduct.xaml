@@ -15,6 +15,7 @@
                          Height="25"
                          Width="700"
                          Margin="5"/>
+                <Button Name="AddProd_Btn" Style="{StaticResource mainBtn}" Margin="520 0 20 0" Content="Добавить товар"/>
                 <ListBox Name="ListProd"
                          Background="Transparent"
                          Width="650"
@@ -34,11 +35,11 @@
                                         Text="{Binding MainImagePath, StringFormat=..//{0}}"/>
                                     <Image Source="{Binding Text, ElementName=StringImage}"
                                            Style="{StaticResource ImgSource}"/>
-                                    <TextBlock Text="{Binding Title}"
+                                    <TextBlock Text="{Binding ProductName}"
                                                Name="TxtNameProd"
                                                Style="{StaticResource prdctTxtb}"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Cost}"
+                                        <TextBlock Text="{Binding ProductCost}"
                                                    Name="TxtCost"
                                                    Style="{StaticResource prdctTxtb}"/>
                                         <TextBlock Text=" рублей"
@@ -50,10 +51,10 @@
                                                 Style="{StaticResource mainBtn}"
                                                 Click="BtnEdit_Click"
                                                 Content="Редактировать"/>
-                                        <Button Name="BtnSalehistory"
+                                        <Button Name="BtnDelete"
                                                 Style="{StaticResource mainBtn}"
-                                                Click="BtnSalehistory_Click"
-                                                Content="История продаж"/>
+                                                Click="BtnDelete_Click"
+                                                Content="Удалить товар"/>
                                     </StackPanel>
                                 </StackPanel>
                             </ListBoxItem>

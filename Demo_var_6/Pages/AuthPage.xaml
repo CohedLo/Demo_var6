@@ -17,17 +17,17 @@
                 <TextBlock Text="Авторизация" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
 
                 <Grid  Margin="0 0 0 10">
-                    <Button x:Name="SignUpBtn" FontFamily="Comic Sans MS" HorizontalAlignment="Left" Background="White" Margin="20 0 0 0" Content="Вход" Width="80" Click ="Button_Reg_Click"/>
-                    <Button  HorizontalAlignment="Left" Content="Регистрация"  Style="{StaticResource mainBtn}" Margin="140,0,0,0" Height="32" Width="140" VerticalAlignment="Top" Click="Button_Click"/>
+                    <Button x:Name="SignUpBtn" FontFamily="Comic Sans MS" HorizontalAlignment="Left" Background="White" Margin="20 0 0 0" Content="Вход" Width="80" Click ="BtnAuth_Click"/>
+                    <Button  HorizontalAlignment="Left" Content="Регистрация"  Style="{StaticResource mainBtn}" Margin="140,0,0,0" Height="32" Width="140" VerticalAlignment="Top" Click="BtnReg_Click"/>
                 </Grid>
 
                 <TextBox Margin="50 0 0 0" BorderBrush="White" FontFamily="Comic Sans MS" Text="Введите Логин"/>
-                <TextBox x:Name="LoginLabel" Foreground="Black" Style="{StaticResource mainTxt}" TextChanged="LoginLabel_TextChanged"/>
+                <TextBox x:Name="LoginLabel" Foreground="Black" Style="{StaticResource mainTxt}" />
                 <TextBox Margin="50 0 0 0" BorderBrush="White" FontFamily="Comic Sans MS" Text="Введите Пароль"/>
                 <PasswordBox x:Name="PassLabel" Style="{StaticResource Password}"/>
-                <Button x:Name="AuthGost" FontFamily="Comic Sans MS" Content="Войти как гость" Background="White" BorderBrush="White"/>
+                <Button x:Name="AuthGost" FontFamily="Comic Sans MS" Click="BtnGuest_Click" Content="Войти как гость" Background="White" BorderBrush="White"/>
 
-                <Button x:Name="SignInBtn" Content="Войти" Margin="0 20" Style="{StaticResource mainBtn}" Click="Button_Auth_Click"/>
+                <Button x:Name="SignInBtn" Click="Btn_Auth_Click" Content="Войти" Margin="0 20" Style="{StaticResource mainBtn}"/>
             </StackPanel>
         </Border>
     </Grid>

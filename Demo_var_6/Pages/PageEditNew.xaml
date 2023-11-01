@@ -5,11 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Demo_var_6.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="PageEditNew">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите Артикул: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtArticul" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите название: "
                     Style="{StaticResource mainTxtb}"/>
@@ -17,10 +23,46 @@
                     Style="{StaticResource mainTxt}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите единицу измерения: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtMesur" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Цена: "
                     Style="{StaticResource mainTxtb}"/>
                 <TextBox Name="TxtCost" 
                   Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите размер макс скидки: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtMaxDisc" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите Поставщика: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtProvider" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите категорию товара: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtCategory" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите действующую скидки: "
+                           Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtAmountDisc" 
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите кол-во на складе: "
+                                 Style="{StaticResource mainTxtb}"/>
+                <TextBox Name="TxtQuntStock" 
+                         Style="{StaticResource mainTxt}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Описание: "
@@ -41,13 +83,9 @@
                    Style="{StaticResource mainCmbx}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <RadioButton Name="RbActive"
-                      Content="Доступен"
-                      Style="{StaticResource dfltRb}"/>
-                <RadioButton Name="RbNotActive"
-                      Content="Не доступен"
-                      Style="{StaticResource dfltRb}"/>
+               
                 <Button Name="BtnSave"
+                        HorizontalAlignment="Right"
                  Click="BtnSave_Click"
                  Style="{StaticResource mainBtn}"
                  Content="Сохранить"/>

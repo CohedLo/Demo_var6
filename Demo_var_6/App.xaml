@@ -22,7 +22,7 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="Height" Value="30"/>
         </Style>
@@ -30,7 +30,7 @@
         <Style TargetType="TextBlock" x:Key="mainTxtb">
             <Setter Property="Width" Value="210"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
@@ -38,7 +38,7 @@
         <Style TargetType="TextBlock" x:Key="prdctTxtb">
             <Setter Property="Width" Value="210"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
@@ -46,7 +46,7 @@
         <Style TargetType="RadioButton" x:Key="dfltRb">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
@@ -58,12 +58,13 @@
 
  
             <Style TargetType="ListBoxItem"
-            x:Key="LblRed">
+                   x:Key="LblRed">
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Product.IsActive}"
                           Value="0">
                         <Setter Property="Background" Value="White"/>
-                    </DataTrigger>
+                    <Setter Property="Foreground" Value="Black"/>
+                </DataTrigger>
                 </Style.Triggers>
             </Style>
 

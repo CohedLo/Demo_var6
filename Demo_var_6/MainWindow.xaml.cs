@@ -28,7 +28,12 @@ namespace Demo_var_6
             ConnectObj.conObj = new TradeEntities();
             FrameObj.frameMain = frmMain;
 
-            frmMain.Navigate(new PageMain());
+            frmMain.Navigate(new AuthPage());
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.GoBack();
         }
     }
 }
